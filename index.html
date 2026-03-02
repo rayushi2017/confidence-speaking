@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confidence in School Speaking | Small Batches of 5</title>
+  <meta name="description" content="Live online confidence training for children aged 8–14. Small batches of 5 students. Starting 01st April 2026 onwards. Continue only if you see visible confidence growth. Book a 15-minute confidence assessment." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bgA:#eef2ff;
+      --bgB:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --card:#ffffff;
+      --stroke: rgba(15, 23, 42, 0.08);
+      --shadow: 0 18px 55px rgba(2,6,23,0.10);
+      --shadow2: 0 10px 30px rgba(2,6,23,0.08);
+      --accent:#4f46e5;
+      --accent2:#4338ca;
+      --radius: 18px;
+      --ring: rgba(79,70,229,0.22);
+    }
+
+    *{ box-sizing: border-box; }
+
+    body{
+      margin:0;
+      font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1000px 650px at 18% 10%, var(--bgA), transparent 60%),
+        radial-gradient(900px 600px at 88% 20%, rgba(16,185,129,0.14), transparent 55%),
+        linear-gradient(135deg, #f8fafc, var(--bgB));
+    }
+
+    .container{
+      width: 92%;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .topbar{
+      padding: 14px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .topbar .row{
+      display:flex;
+      gap: 10px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap: wrap;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(79,70,229,0.10);
+      border: 1px solid rgba(79,70,229,0.18);
+      color: #2b2a7a;
+      font-weight: 600;
+      font-size: 12px;
+    }
+    .pill .dot{
+      width: 8px; height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(79,70,229,0.15);
+    }
+
+    .hero{
+      padding: 20px 0 26px;
+    }
+    .heroCard{
+      background: linear-gradient(135deg, rgba(255,255,255,0.92), rgba(255,255,255,0.70));
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 0;
+      align-items: stretch;
+    }
+    .heroLeft{
+      padding: 44px 42px;
+    }
+    h1{
+      margin: 0 0 10px;
+      font-size: 40px;
+      line-height: 1.15;
+      letter-spacing: -0.7px;
+    }
+    .sub{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 60ch;
+    }
+    .bullets{
+      margin: 16px 0 20px;
+      padding: 0;
+      list-style:none;
+      display:grid;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .bullets li{
+      display:flex;
+      gap: 10px;
+      align-items:flex-start;
+    }
+    .check{
+      width: 20px; height: 20px;
+      border-radius: 8px;
+      background: rgba(16,185,129,0.12);
+      border: 1px solid rgba(16,185,129,0.20);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color: #0f766e;
+      font-weight: 900;
+      flex: 0 0 20px;
+      margin-top: 2px;
+    }
+
+    .ctaRow{
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items:center;
+      margin-top: 6px;
+    }
+    .cta{
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 14px 22px;
+      font-size: 15px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: 0.25s;
+      box-shadow: 0 12px 28px rgba(79,70,229,0.28);
+    }
+    .cta:hover{
+      background: var(--accent2);
+      transform: translateY(-2px);
+    }
+
+    .heroRight{
+      padding: 28px 26px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-left: 1px solid var(--stroke);
+      background:
+        radial-gradient(500px 350px at 30% 20%, rgba(79,70,229,0.18), transparent 55%),
+        radial-gradient(500px 350px at 70% 70%, rgba(16,185,129,0.14), transparent 55%),
+        linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.9));
+    }
+
+    .illusWrap{
+      width: 100%;
+      max-width: 440px;
+      background: rgba(255,255,255,0.86);
+      border: 1px solid var(--stroke);
+      border-radius: 22px;
+      box-shadow: var(--shadow2);
+      padding: 18px;
+    }
+
+    .section{
+      padding: 18px 0;
+    }
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .card{
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow2);
+      padding: 26px;
+    }
+    h2{
+      margin: 0 0 12px;
+      font-size: 20px;
+      letter-spacing: -0.2px;
+    }
+    ul.std{
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.85;
+      font-size: 14px;
+    }
+    .highlight{
+      margin-top: 14px;
+      padding: 14px 14px;
+      border-radius: 14px;
+      background: rgba(16,185,129,0.10);
+      border: 1px solid rgba(16,185,129,0.20);
+      font-weight: 700;
+      color: #0f766e;
+      font-size: 14px;
+    }
+
+    .imageCard{
+      margin-top: 16px;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--stroke);
+      box-shadow: var(--shadow2);
+      background: rgba(255,255,255,0.86);
+      padding: 14px;
+    }
+
+    details{
+      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,0.86);
+      border-radius: 14px;
+      padding: 12px 14px;
+      box-shadow: var(--shadow2);
+    }
+    details + details{ margin-top: 10px; }
+    summary{
+      cursor:pointer;
+      font-weight: 700;
+      color: #334155;
+      list-style:none;
+    }
+    summary::-webkit-details-marker{ display:none; }
+    details p{
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .finalCta{
+      text-align:center;
+      padding: 28px 18px;
+      border: 1px solid rgba(79,70,229,0.16);
+      background: linear-gradient(135deg, rgba(79,70,229,0.10), rgba(16,185,129,0.08), rgba(255,255,255,0.95));
+      border-radius: var(--radius);
+      box-shadow: var(--shadow2);
+    }
+    .finalCta h2{ font-size: 22px; }
+
+    footer{
+      padding: 18px 0 40px;
+      color: #64748b;
+      font-size: 12px;
+      text-align:center;
+    }
+
+    /* Modal */
+    .modal{
+      display:none;
+      position:fixed;
+      inset:0;
+      background: rgba(2,6,23,0.62);
+      z-index: 999;
+      padding: 18px;
+    }
+    .modalContent{
+      width: 100%;
+      max-width: 430px;
+      margin: 6% auto;
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 30px 90px rgba(0,0,0,0.30);
+      border: 1px solid rgba(15,23,42,0.12);
+      padding: 22px;
+      position: relative;
+    }
+    .close{
+      position:absolute;
+      top: 10px; right: 14px;
+      font-size: 22px;
+      cursor:pointer;
+      color:#334155;
+    }
+    label{
+      display:block;
+      margin-top: 10px;
+      font-size: 12px;
+      color: #64748b;
+    }
+    input{
+      width: 100%;
+      margin-top: 6px;
+      padding: 12px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(15,23,42,0.18);
+      outline: none;
+      font-family: inherit;
+      font-size: 14px;
+    }
+    input:focus{
+      border-color: rgba(79,70,229,0.7);
+      box-shadow: 0 0 0 4px var(--ring);
+    }
+    .submit{
+      width: 100%;
+      margin-top: 14px;
+      padding: 14px 22px;
+      font-size: 15px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 12px 28px rgba(79,70,229,0.28);
+    }
+    .submit:hover{ background: var(--accent2); }
+
+    @media (max-width: 980px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      .heroRight{ border-left: none; border-top: 1px solid var(--stroke); }
+      h1{ font-size: 32px; }
+    }
+    @media (max-width: 700px){
+      .grid2{ grid-template-columns: 1fr; }
+      .heroLeft{ padding: 32px 22px; }
+      .heroRight{ padding: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div class="row">
+        <div class="pill"><span class="dot"></span> Starting <span>01st April 2026 onwards</span></div>
+        <div>Live Online • Ages 8–14 • <b>Max 5 students</b> per group</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="container">
+      <div class="heroCard">
+        <div class="heroGrid">
+          <div class="heroLeft">
+            <h1>Confidence in School Speaking</h1>
+
+            <p class="sub">
+              Small batches. Maximum <b>5 students per group</b>.<br>
+              Attend the initial sessions. <b>Continue only if you see visible confidence growth.</b>
+            </p>
+
+            <ul class="bullets">
+              <li><span class="check">✓</span> Speak up in class without freezing</li>
+              <li><span class="check">✓</span> Present projects with clear structure and voice</li>
+              <li><span class="check">✓</span> Reduce hesitation and increase participation</li>
+            </ul>
+
+            <div class="ctaRow">
+              <button class="cta" onclick="openModal()">Book a 15-Minute Confidence Assessment</button>
+            </div>
+          </div>
+
+          <div class="heroRight">
+            <div class="illusWrap" aria-label="Cartoon illustration of a child giving a speech at a podium">
+              <!-- HERO IMAGE (A): Kid speaking on stage / podium / mic (inline SVG, no external files) -->
+              <svg viewBox="0 0 640 420" width="100%" height="auto" role="img" aria-label="Kid giving a speech at podium">
+                <defs>
+                  <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#4f46e5" stop-opacity="0.18"/>
+                    <stop offset="1" stop-color="#10b981" stop-opacity="0.14"/>
+                  </linearGradient>
+                  <linearGradient id="stageGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#111827" stop-opacity="0.12"/>
+                    <stop offset="1" stop-color="#111827" stop-opacity="0.04"/>
+                  </linearGradient>
+                </defs>
+
+                <rect x="0" y="0" width="640" height="420" rx="26" fill="url(#bgGrad)"/>
+
+                <!-- confetti -->
+                <circle cx="520" cy="78" r="7" fill="#f59e0b"/>
+                <circle cx="554" cy="104" r="5" fill="#10b981"/>
+                <circle cx="498" cy="108" r="4" fill="#4f46e5"/>
+                <circle cx="575" cy="82" r="4" fill="#ef4444"/>
+
+                <!-- stage -->
+                <rect x="60" y="305" width="520" height="70" rx="18" fill="url(#stageGrad)"/>
+                <rect x="90" y="290" width="460" height="18" rx="9" fill="#4f46e5" opacity="0.10"/>
+
+                <!-- podium -->
+                <rect x="270" y="190" width="160" height="170" rx="18" fill="#c7a07a" opacity="0.98"/>
+                <rect x="285" y="205" width="130" height="135" rx="14" fill="#b48b63" opacity="0.95"/>
+                <circle cx="350" cy="273" r="22" fill="#ffffff" opacity="0.55"/>
+
+                <!-- mic stand -->
+                <rect x="458" y="170" width="16" height="120" rx="8" fill="#0f172a" opacity="0.78"/>
+                <circle cx="466" cy="160" r="16" fill="#0f172a" opacity="0.78"/>
+                <rect x="438" y="154" width="24" height="10" rx="5" fill="#0f172a" opacity="0.78"/>
+
+                <!-- kid -->
+                <circle cx="208" cy="150" r="44" fill="#ffd7c2"/>
+                <!-- hair -->
+                <path d="M170 146c10-34 66-52 92-10 0 0-10-22-42-22-27 0-40 18-50 32z" fill="#2b2a7a" opacity="0.95"/>
+                <!-- face -->
+                <circle cx="193" cy="152" r="5" fill="#111827" opacity="0.85"/>
+                <circle cx="225" cy="152" r="5" fill="#111827" opacity="0.85"/>
+                <path d="M200 170c12 10 28 10 40 0" stroke="#ef4444" stroke-width="5" stroke-linecap="round" opacity="0.7"/>
+                <!-- body -->
+                <rect x="168" y="195" width="86" height="110" rx="22" fill="#a78bfa" opacity="0.96"/>
+                <rect x="168" y="235" width="86" height="18" rx="9" fill="#4f46e5" opacity="0.20"/>
+                <!-- arm -->
+                <path d="M254 220c32 6 48 20 58 34" stroke="#ffd7c2" stroke-width="18" stroke-linecap="round"/>
+                <circle cx="318" cy="258" r="12" fill="#ffd7c2"/>
+
+                <!-- speech bubble -->
+                <path d="M110 70c0-22 18-40 40-40h160c22 0 40 18 40 40v28c0 22-18 40-40 40H210l-30 26 6-26h-36c-22 0-40-18-40-40V70z"
+                      fill="#ffffff" opacity="0.80"/>
+                <rect x="158" y="72" width="150" height="14" rx="7" fill="#94a3b8" opacity="0.55"/>
+                <rect x="158" y="98" width="120" height="14" rx="7" fill="#94a3b8" opacity="0.50"/>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="grid2">
+        <div class="card">
+          <h2>Does your child:</h2>
+          <ul class="std">
+            <li>Hesitate to speak in class?</li>
+            <li>Feel nervous during presentations?</li>
+            <li>Struggle to organize thoughts while answering?</li>
+            <li>Speak softly or unclearly?</li>
+          </ul>
+          <div class="highlight">Confidence is a trainable skill.</div>
+        </div>
+
+        <div class="card">
+          <h2>Program Format</h2>
+          <ul class="std">
+            <li>Live Online</li>
+            <li><b>Maximum 5 Students Per Batch</b></li>
+            <li>Interactive practice-based sessions</li>
+            <li>Optional one-to-one sessions (if required)</li>
+          </ul>
+          <div class="highlight" style="background: rgba(79,70,229,0.10); border-color: rgba(79,70,229,0.20); color:#2b2a7a;">
+            Starting 01st April 2026 onwards
+          </div>
+
+          <!-- SECOND IMAGE (B): Classroom kids raising hands (inline SVG, no external files) -->
+          <div class="imageCard" aria-label="Cartoon classroom illustration of kids raising hands">
+            <svg viewBox="0 0 720 360" width="100%" height="auto" role="img" aria-label="Classroom kids raising hands">
+              <defs>
+                <linearGradient id="cBg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#4f46e5" stop-opacity="0.12"/>
+                  <stop offset="1" stop-color="#10b981" stop-opacity="0.10"/>
+                </linearGradient>
+              </defs>
+
+              <rect x="0" y="0" width="720" height="360" rx="22" fill="url(#cBg)"/>
+
+              <!-- board -->
+              <rect x="70" y="45" width="580" height="90" rx="14" fill="#0f172a" opacity="0.15"/>
+              <rect x="95" y="68" width="210" height="12" rx="6" fill="#94a3b8" opacity="0.55"/>
+              <rect x="95" y="92" width="260" height="12" rx="6" fill="#94a3b8" opacity="0.50"/>
+              <rect x="95" y="116" width="170" height="12" rx="6" fill="#94a3b8" opacity="0.45"/>
+
+              <!-- desks row -->
+              <rect x="70" y="255" width="580" height="64" rx="18" fill="#c7a07a" opacity="0.92"/>
+              <rect x="70" y="240" width="580" height="18" rx="9" fill="#b48b63" opacity="0.50"/>
+
+              <!-- kid 1 -->
+              <circle cx="170" cy="200" r="28" fill="#ffd7c2"/>
+              <path d="M144 195c8-18 34-28 52-8 0 0-10-18-28-18-14 0-20 10-24 26z" fill="#2b2a7a" opacity="0.9"/>
+              <rect x="142" y="228" width="56" height="40" rx="14" fill="#a78bfa" opacity="0.95"/>
+              <!-- hand up -->
+              <path d="M198 232c20-26 40-34 52-38" stroke="#ffd7c2" stroke-width="14" stroke-linecap="round"/>
+              <circle cx="255" cy="192" r="10" fill="#ffd7c2"/>
+
+              <!-- kid 2 -->
+              <circle cx="360" cy="200" r="28" fill="#ffd7c2"/>
+              <path d="M332 198c10-20 44-26 56 0 0 0-10-20-30-20-18 0-22 12-26 20z" fill="#111827" opacity="0.75"/>
+              <rect x="332" y="228" width="56" height="40" rx="14" fill="#60a5fa" opacity="0.95"/>
+              <!-- hand up -->
+              <path d="M388 234c18-30 40-44 62-52" stroke="#ffd7c2" stroke-width="14" stroke-linecap="round"/>
+              <circle cx="458" cy="180" r="10" fill="#ffd7c2"/>
+
+              <!-- kid 3 -->
+              <circle cx="550" cy="200" r="28" fill="#ffd7c2"/>
+              <path d="M524 198c8-18 34-26 54-10 0 0-12-18-30-18-14 0-20 10-24 28z" fill="#0f766e" opacity="0.75"/>
+              <rect x="522" y="228" width="56" height="40" rx="14" fill="#34d399" opacity="0.90"/>
+              <!-- hand up -->
+              <path d="M578 232c20-26 44-36 60-44" stroke="#ffd7c2" stroke-width="14" stroke-linecap="round"/>
+              <circle cx="646" cy="182" r="10" fill="#ffd7c2"/>
+
+              <!-- small accents -->
+              <circle cx="620" cy="70" r="6" fill="#f59e0b"/>
+              <circle cx="595" cy="95" r="4" fill="#ef4444"/>
+              <circle cx="640" cy="98" r="4" fill="#10b981"/>
+            </svg>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:16px;">
+        <h2>What Does “Visible Confidence Growth” Mean?</h2>
+        <ul class="std">
+          <li>Clearer voice projection</li>
+          <li>Better structured answers</li>
+          <li>Reduced hesitation</li>
+          <li>Increased participation</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top:16px;">
+        <h2>Parents usually ask this</h2>
+        <div class="faq">
+          <details>
+            <summary>My child is shy. Is this suitable?</summary>
+            <p>Yes. Small batches of 5 create a safe space. Confidence grows through structured practice.</p>
+          </details>
+          <details>
+            <summary>Is this about English grammar?</summary>
+            <p>No. This is about confidence + clarity. Language improves naturally when kids speak regularly with guidance.</p>
+          </details>
+          <details>
+            <summary>What if my child needs extra help?</summary>
+            <p>One-to-one sessions can be taken if required, based on the assessment and progress.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="finalCta" style="margin-top:16px;">
+        <h2>Book a 15-Minute Confidence Assessment</h2>
+        <p class="sub" style="margin: 8px auto 14px; max-width: 70ch;">
+          Starting 01st April 2026 onwards • Small batches of 5 • Continue only if you see visible confidence growth
+        </p>
+        <button class="cta" onclick="openModal()">Schedule Now</button>
+      </div>
+
+      <footer>
+        © <span id="year"></span> Confidence in School Speaking • Small batches of 5
+      </footer>
+
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modalContent">
+      <span class="close" onclick="closeModal()" aria-label="Close">&times;</span>
+      <h3 id="modalTitle" style="margin:0 0 6px;font-size:18px;">Confidence Assessment (15 Minutes)</h3>
+
+      <form id="leadForm">
+        <label for="parentName">Parent Name</label>
+        <input id="parentName" type="text" placeholder="e.g., Rahul Sharma" required>
+
+        <label for="childAge">Child Age</label>
+        <input id="childAge" type="number" min="5" max="18" placeholder="e.g., 10" required>
+
+        <label for="city">City</label>
+        <input id="city" type="text" placeholder="e.g., Prayagraj" required>
+
+        <label for="parentWhatsApp">Parent WhatsApp Number</label>
+        <input id="parentWhatsApp" type="text" placeholder="e.g., 9876543210" required>
+
+        <button class="submit" type="submit">SEND</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function openModal(){ document.getElementById("modal").style.display = "block"; }
+    function closeModal(){ document.getElementById("modal").style.display = "none"; }
+    window.addEventListener("click", function(e){
+      const m = document.getElementById("modal");
+      if(e.target === m) closeModal();
+    });
+
+    document.getElementById("leadForm").addEventListener("submit", function(e){
+      e.preventDefault();
+
+      const parentName = document.getElementById("parentName").value.trim();
+      const childAge = document.getElementById("childAge").value.trim();
+      const city = document.getElementById("city").value.trim();
+      const parentWhatsApp = document.getElementById("parentWhatsApp").value.trim();
+
+      // ✅ REPLACE THIS WITH YOUR WIFE'S WHATSAPP NUMBER (India example: +91 9812345678 -> 919812345678)
+      const yourNumber = "918504994367";
+
+      const message =
+`New Confidence Assessment Request (Starts 01st April 2026 onwards)
+Parent Name: ${parentName}
+Child Age: ${childAge}
+City: ${city}
+Parent WhatsApp: ${parentWhatsApp}
+
+Preferred time for 15-min call (today/tomorrow):`;
+
+      const url = `https://wa.me/${yourNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
+      closeModal();
+    });
+  </script>
+
+</body>
+</html>
